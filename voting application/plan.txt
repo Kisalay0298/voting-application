@@ -1,0 +1,38 @@
+voting application:
+a functionality where users can give vote to the given set of candidates
+b functionality where users can view the result of the election
+c functionality where users can view the details of the candidates
+d functionality where users can view the details of the election
+
+1. user signup/login
+2. can view the list of candidates
+3. can vote for one candidate, and after voting user can't vote again
+4. show the vote caunts sorted by their vote count
+5. user data must contain their one unique government id proof named: aadhar card number
+6. one admin which can add or remove candidate name but can't vote
+7. users can change their password
+8. login via aadhar card number and password
+
+--------------------------------------------------------------
+
+routes
+user authentication:
+- /signup: post (create new user account)
+- /login: post (login existing user account)
+
+voting:
+- /candidates: get (view list of candidates)
+- /vote/:candidateId: post (cast vote for a candidate)
+
+vote counts:
+- /vote/counts: get (view vote counts in sorted manner)
+
+User Profile:
+- /profile: get (view user profile)
+- /profile: put (update user profile like password, DP)
+
+Admin:
+- /admin/candidates: post (add new candidate)
+- /admin/candidates/:candidateId: put (update existing candidate)
+- /admin/candidates/:candidateId: delete (remove candidate from list)
+
